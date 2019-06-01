@@ -19,6 +19,7 @@
     @media (max-width: $screen-sm) {
         height: 100vh;
         max-height: unset;
+        background-attachment: scroll;
     }
 
     .main-content {
