@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Frontend Chalenge - QConcursos</title>
+</head>
+<body>
+    <button id="mobile-button" class="mobile-button">
+        <i class="fas fa-bars mobile-button-icon"></i>
+    </button>
+
+    <div class="side-menu">
+        <span class="logo">Thiago Coutinho</span>
+        <ul class="side-menu-links-list">
+            <li id="side-menu-link-main" class="side-menu-link active">
+                <a class="side-menu-anchor" href=#main-section>
+                    <i class="fas fa-home side-menu-icon"></i>
+                    <span class="side-menu-link-text">Home</span>
+                </a>
+            </li>
+            <li id="side-menu-link-about-me" class="side-menu-link">
+                <a class="side-menu-anchor" href="#about-me-section">
+                    <i class="fas fa-address-card side-menu-icon"></i>
+                    <span class="side-menu-link-text">Sobre</span>
+                </a>
+            </li>
+            <li id="side-menu-link-challenge" class="side-menu-link">
+                <a class="side-menu-anchor" href="#challenge-section">
+                    <i class="fas fa-medal side-menu-icon"></i>
+                    <span class="side-menu-link-text">Desafio</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-left">
+                <h1 class="logo">Thiago Coutinho</h1>
+            </div>
+            <nav class="navbar-right">
+                <ul class="navbar-links-list">
+                    <li class="navbar-link">
+                        <a class="navbar-anchor" href=#main-section>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="navbar-link">
+                        <a class="navbar-anchor" href="#about-me-section">
+                            <span>Sobre</span>
+                        </a>
+                    </li>
+                    <li class="navbar-link">
+                        <a class="navbar-anchor" href="#challenge-section">
+                            <span>Desafio</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-section" class="main">
+        <div class="main-content">
+            <h2 class="main-content-title">Desenvolvedor Front End</h2>
+            <span class="main-content-subtitle">Desafio Qconcursos.com</span>
+        </div>
+        <div class="main-footer">
+            <ul class="social-media-list">
+                <li class="social-media-item">
+                    <a target="_blank" href="https://www.facebook.com/thiago.coutinho.739">
+                        <i class="fab fa-facebook-square social-media-icon"></i>
+                    </a>
+                </li>
+                <li class="social-media-item">
+                    <a target="_blank" href="https://www.linkedin.com/in/thiago-coutinho-4331a4103/">
+                        <i class="fab fa-linkedin social-media-icon"></i>
+                    </a>
+                </li>
+                <li class="social-media-item">
+                    <a target="_blank" href="https://github.com/th-coutinho">
+                        <i class="fab fa-github-square social-media-icon"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+    </main>
+    
+    <section id="about-me-section" class="about-me">
+        <div class="about-me-content">
+            <h3 class="about-me-title">Sobre</h3>
+            <p class=about-me-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam viverra orci sagittis eu volutpat odio facilisis. Diam vulputate ut pharetra sit amet aliquam. Nisi vitae suscipit tellus mauris a diam maecenas sed. Lectus vestibulum mattis ullamcorper velit. </p>
+            <p class=about-me-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam viverra orci sagittis eu volutpat odio facilisis. Diam vulputate ut pharetra sit amet aliquam. Nisi vitae suscipit tellus mauris a diam maecenas sed. Lectus vestibulum mattis ullamcorper velit. </p>
+            <p class=about-me-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam viverra orci sagittis eu volutpat odio facilisis. Diam vulputate ut pharetra sit amet aliquam. Nisi vitae suscipit tellus mauris a diam maecenas sed. Lectus vestibulum mattis ullamcorper velit. </p>
+        </div>
+    </section>
+    
+    <section id="challenge-section" class="challenge">
+        <h3 class="challenge-title">Desafio</h3>
+        <div class="challenge-container">
+            <div class="challenge-board">
+                <div class="challenge-board-left">
+                    <div id="user-picture" class=user-picture></div>
+                    <a id="user-profile-link" class="user-profile-link" href="#" target="_blank">
+                        <span class="">Visitar Perfil</span>
+                    </a>
+                </div>
+                <div class="challenge-board-right">
+                    <ul class="challenge-board-info">
+                        <li class="challenge-board-item user-name">
+                            <span id="user-name"></span>
+                        </li>
+                        <li class="challenge-board-item">
+                            <span>Repositórios: <span id="user-repositories"></span></span>
+                        </li>
+                        <li class="challenge-board-item">
+                            <span>Seguidores: <span id="user-followers"></span></span>
+                        </li>
+                        <li class="challenge-board-item">
+                            <span>Seguindo: <span id="user-following"></span></span>
+                        </li>
+                    </ul>
+                    <div class="challenge-buttons">
+                        <button id="show-repos-button" class=challenge-button>
+                            <span class="challenge-button-text">Ver Repositórios</span>
+                        </button>
+                        <button id="show-starred-button" class=challenge-button>
+                            <span class="challenge-button-text">Ver Favoritos</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="challenge-repositories">
+                    <h4 class="challenge-repos-title challenge-list-title hidden">Lista dos Repositórios</h4>
+                    <ul id="challenge-repos-list" class="challenge-repositories-list">
+                    </ul>
+
+                    <h4 class="challenge-starred-title challenge-list-title hidden">Lista dos Favoritos</h4>
+                    <ul id="challenge-starred-list" class="challenge-repositories-list">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <span class="footer-text">Desafio Desenvolvedor Front-End</span>
+    </footer>
+<script type="text/javascript" src="main.js"></script></body>
+</html>
