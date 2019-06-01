@@ -1,0 +1,17 @@
+%container {
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  
+  @media (min-width: $screen-lg) {
+      width: 750px;
+  }
+  @media (min-width: $screen-md) {
+      width: 970px;
+  }
+  @media (min-width: $screen-lg) {
+      width: 1170px;
+  }
+}

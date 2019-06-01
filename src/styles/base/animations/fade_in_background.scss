@@ -1,0 +1,4 @@
+@include keyframes (fade-in-background) {
+    0% { background-color: transparentize(black, 0.1); }
+    100% { background-color: transparentize(black, .4); }
+}

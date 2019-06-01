@@ -1,0 +1,33 @@
+  // FONTS
+  @import './base/fonts.scss';
+
+  // BASE 
+  @import './base/general.scss';
+  @import './base/variables.scss';
+
+  
+  // MIXINS
+  @import "./base/mixins/animations.scss";
+  @import "./base/mixins/transitions.scss";
+  
+  // PLACEHOLDERS
+  @import "./base/placeholders/section_title.scss";
+  @import "./base/placeholders/link_uderline_hover.scss";
+  @import "./base/placeholders/container.scss";
+
+  // ANIMATIONS
+  @import './base/animations/typewritter_effect.scss';
+  @import './base/animations/fix_unfix_navbar.scss';
+  @import './base/animations/fade_in_background.scss';
+  @import './base/animations/growing_repository.scss';
+
+  // COMPONENTS
+  @import './components/mobile_button.scss';
+  @import './components/side-menu.scss';
+  @import './components/about_me.scss';
+  @import './components/navbar.scss';
+  @import './components/main.scss';
+  @import './components/challenge.scss';
+  @import './components/footer.scss';
+
+ 

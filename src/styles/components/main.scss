@@ -1,0 +1,76 @@
+.main {
+    position: relative;
+    background-image: url("../images/mainheader_min.png");
+    background-color: transparentize(black, 0.1);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: bottom center;
+    background-attachment: fixed;
+    max-height: 100vh;
+    height: 700px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    @include animation(fade-in-background 3s ease-in 4s forwards);
+    
+    @media (max-width: $screen-sm) {
+        height: 100vh;
+        max-height: unset;
+    }
+
+    .main-content {
+        color: $color-white;
+        font-family: $font-text;
+
+        .main-content-title {
+            font-size: $font-size-xl;
+            margin-bottom: $margin-sm;
+            overflow: hidden;
+            border-right: $font-size-sm * .4 solid transparent;
+            padding-right: 4px;
+            white-space: nowrap;
+            margin: 0 auto;
+            @include animation((typewritter 4s steps(40, end), caret 1s step-end 6));
+
+            @media (max-width: $screen-md) {
+                font-size: $font-size-xl * .8;
+            }
+
+            @media (max-width: $screen-sm) {
+                font-size: $font-size-xl * .6;
+            }
+
+            @media (max-width: $screen-xs) {
+                font-size: $font-size-xl * .5;
+            }
+        }
+        .main-content-subtitle {
+            font-size: $font-size-lg;
+        }
+    }
+
+    .main-footer {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: $margin-md;
+        .social-media-list {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            .social-media-item {
+                margin: 0 $margin-xs;
+            }
+            .social-media-icon {
+                color: transparentize( $color-white, .5);
+                font-size: $icons-size;
+                @include transition(color $transition-time);
+                &:hover {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+}

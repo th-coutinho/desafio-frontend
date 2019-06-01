@@ -1,0 +1,207 @@
+.challenge {
+    background-color: $color-green;
+    padding: $margin-xl 0;
+    min-height: 600px;
+    height: auto;
+
+    .challenge-title {
+        @extend %section-title;
+    }
+
+    .challenge-container {
+        @extend %container;
+        margin-top: $margin-lg + $margin-md;
+        margin-bottom: $margin-lg + $margin-md;
+    }
+
+    .challenge-board {
+        margin-top: $margin-lg;
+        background-color: $color-white;
+        min-height: 300px;
+        height: auto;
+        margin: 0 $margin-xl * 1.4;
+        box-shadow: 0px 2px 10px transparentize(darken($color-green, 15%), $amount: 0.2);
+        display: flex;
+        flex-wrap: wrap;
+
+        @media (max-width: $screen-sm) {
+            margin: $margin-lg;
+        }
+
+        @media (max-width: $screen-xs) {
+            margin: $margin-sm;
+        }
+
+        .challenge-board-left {
+            margin: $margin-md 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 40%;
+
+            @media (max-width: $screen-md) {
+                width: 50%;
+            }
+
+            @media (max-width: $screen-sm) {
+                width: 100%;
+                margin: $margin-lg 0 0;
+            }
+
+            .user-picture {
+                height: 175px;
+                width: 175px;
+                background-position: center;
+                background-size: cover;
+                border-radius: 50%;
+            }
+    
+            .user-profile-link {
+                text-align: center;
+                color: $color-dark-green;
+                font-family: $font-text;
+                text-transform: uppercase;
+                font-weight: $font-weight-bold;
+                text-decoration: none;
+                margin-top: $margin-sm;
+                font-size: $font-size-sm;
+            }
+
+           
+        }
+
+        .challenge-board-right {
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            @media (max-width: $screen-md) {
+                width: 50%;
+            }
+
+            @media (max-width: $screen-sm) {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            .challenge-board-info {
+                list-style: none;
+                .challenge-board-item {
+                    color: $color-dark-green;
+                    font-family: $font-text;
+                    text-transform: uppercase;
+                    font-weight: $font-weight-bold;
+                    margin: $margin-xs 0;
+                    font-size: $font-size-sm;
+
+                    &.user-name {
+                        font-size: $font-size-lg;
+                        margin: $margin-lg 0;
+                        font-family: $font-title;
+                    }
+                }
+            }
+
+            .challenge-buttons {
+                margin: $margin-lg 0;
+                
+
+                .challenge-button {
+                    border: 2px solid $color-medium-green;
+                    height: 40px;
+                    background-color: transparent;
+                    padding: 0 $padding-md;
+                    margin-right: $margin-xs;
+                    @include transition(background $transition-time, opacity $transition-time, color $transition-time);
+                    cursor: pointer;
+
+                    @media (max-width: $screen-md) {
+                        width: 200px;
+                        &:nth-child(2) {
+                            margin-top: -2px;
+                        }
+                    }
+
+                    .challenge-button-text {
+                        color: $color-medium-green;
+                        font-family: $font-text;
+                        text-transform: uppercase;
+                        font-weight: $font-weight-bold;
+                        font-size: $font-size-md * .9;
+                    }
+                    
+                    &:disabled {
+                        opacity: 0.5;
+                        cursor: default;
+                    }
+
+                    &:hover, &:disabled {
+                        background-color: $color-medium-green;
+                        .challenge-button-text {
+                            color: $color-white;
+                        }
+                    }
+                }
+            }
+            
+        }
+
+        .challenge-repositories {
+            width: 100%;
+            margin: 0 $margin-xl $margin-lg;
+
+            @media (max-width: $screen-xs) {
+                margin: $margin-md;
+            }
+
+            .challenge-list-title {
+                color: $color-dark-green;
+                font-family: $font-text;
+                text-transform: uppercase;
+                font-weight: $font-weight-bold;
+                text-decoration: none;
+                margin: $margin-md 0;
+                font-size: $font-size-sm;
+                &.hidden {
+                    display: none;
+                }
+            }
+
+            .challenge-repositories-list {
+                list-style: none;
+                .challenge-repository {
+                    padding-left: $padding-sm;
+                    @include animation(growing_repository 0.4s forwards);
+                    line-height: 40px;
+                    width: 100%;
+                    background-color: $color-white;
+                    
+                    &:nth-child(2n + 1) {
+                        background-color: $color-green;
+                    }
+                    
+                    .challenge-repository-link {
+                        text-decoration: none;
+                    }
+
+                    .challenge-repository-name {
+                        color: $color-dark-green;
+                        font-size: $font-size-md;
+                        font-family: $font-text;
+
+                        @media (max-width: $screen-xs) {
+                            font-size: $font-size-sm;
+                        }
+                    }
+                }
+            }
+        }
+
+        
+    }
+}

@@ -1,0 +1,87 @@
+
+.side-menu {
+    position: fixed;
+    overflow: hidden;
+    background: transparentize($color-white, .0);
+    box-shadow: 4px 1px 15px transparentize($color-dark-gray, .8);
+    z-index: 11;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100vh;
+    padding: $margin-md $margin-lg;
+    max-width: 75%;
+    opacity: 0;
+    @include transition((width $transition-time * 1.25, opacity $transition-time * 1.25));
+
+    @media (min-width: $screen-md) {
+        display: none;
+    }
+
+    &.visible {
+        opacity: 1;
+        width : 300px;
+        max-width: 75%;
+    }
+
+    .logo {
+        display: block;
+        white-space: nowrap;
+        font-family: $font-title;
+        text-transform: uppercase;
+        font-size: $font-size-lg;
+        color: $color-black;
+        font-weight: $font-weight-regular;
+        opacity: 0;
+        padding-bottom: $padding-xs;
+        width: fit-content;
+        border-bottom: 1px solid $color-black;
+        @extend %link-underline-hover;
+        @include transition(opacity $transition-time * 6);
+        
+        &.show {
+            opacity: 1;    
+        }
+    }
+
+    .side-menu-links-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        margin-top: $margin-sm;
+
+        .side-menu-anchor {
+            text-decoration: none;
+            overflow: visible;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center
+        }
+
+        .side-menu-link {
+            font-size: $font-size-md;
+            padding: $padding-xs;
+            color: $color-black;
+            font-family: $font-title;
+            @extend %link-underline-hover;
+            overflow: visible;
+            width: 100%;
+
+            &.active {
+                background-color: $color-black;
+                .side-menu-link-text, .side-menu-icon {
+                    color: $color-white;
+                }
+            }
+        }
+        
+        .side-menu-link-text {
+            color: $color-black;
+            padding-left: $padding-xs;
+        }
+
+        .side-menu-icon {
+            color: $color-black;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+@include keyframes (fixing) {
+    0% { top: -40px }
+    100% { top: 0 }
+}
+
+@include keyframes (unfixing) {
+    0% { top: 0 }
+    100% { top: -60px }
+}

@@ -1,0 +1,13 @@
+.footer {
+    background-color: $color-dark-gray;
+    padding: $margin-lg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .footer-text {
+        color: $color-white;
+        font-family: $font-text;
+        font-size: $font-size-sm;
+    }
+}

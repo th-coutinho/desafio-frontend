@@ -1,0 +1,36 @@
+.about-me {
+    padding: $margin-xl 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 650px;
+    height: 100vh;
+
+    @media (max-width: $screen-md) {
+        max-height: unset;
+        height: auto;
+    }
+    .about-me-content {
+        @extend %container;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+
+        .about-me-title {
+           @extend %section-title;
+        }
+
+        .about-me-text {
+            color: $color-black;
+            font-size: $font-size-sm;
+            font-family: $font-text;
+            text-align: left;
+            margin: $margin-sm $margin-xl * 2;
+
+            @media (max-width: $screen-md) {
+                margin: $margin-md;
+            }
+        }
+    }
+}

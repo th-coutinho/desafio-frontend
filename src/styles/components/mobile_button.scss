@@ -1,0 +1,28 @@
+.mobile-button {
+    position: fixed;
+    top: $margin-md;
+    right: $margin-md;
+    height: 50px;
+    width: 50px;
+    z-index: 11;
+    background-color: transparentize($color-black, 0.5);
+    border: 1px solid $color-white;
+    @include transition(background $transition-time);
+
+    .mobile-button-icon {
+        color: $color-white;
+        font-size: $font-size-lg;
+    }
+
+    &:hover, &:focus, &:active {
+        background-color: $color-white;
+        .mobile-button-icon {
+            background-clip: text;
+            color: $color-black;
+        }
+    }
+
+    @media (min-width: $screen-md) {
+        display: none;
+    }
+}
