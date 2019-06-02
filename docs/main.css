@@ -327,6 +327,8 @@ body * {
     opacity: 1;
     width: 300px;
     max-width: 75%; }
+  .side-menu .side-menu-logo-anchor {
+    text-decoration: none; }
   .side-menu .side-menu-logo {
     display: block;
     white-space: nowrap;
@@ -624,6 +626,9 @@ body * {
             font-family: "Titillium Web", sans-serif; }
       .challenge .challenge-board .challenge-board-right .challenge-buttons {
         margin: 40px 0; }
+        @media (max-width: 992px) {
+          .challenge .challenge-board .challenge-board-right .challenge-buttons {
+            margin: 20px 0; } }
         .challenge .challenge-board .challenge-board-right .challenge-buttons .challenge-button {
           border: 2px solid #93cea3;
           height: 40px;
@@ -658,19 +663,22 @@ body * {
             margin-right: 14px; }
             .challenge .challenge-board .challenge-board-right .challenge-buttons .challenge-button .challenge-button-icon.inverted {
               transform: rotate(180deg); }
-          .challenge .challenge-board .challenge-board-right .challenge-buttons .challenge-button:disabled {
-            opacity: 0.5;
-            cursor: default; }
-          .challenge .challenge-board .challenge-board-right .challenge-buttons .challenge-button:hover, .challenge .challenge-board .challenge-board-right .challenge-buttons .challenge-button:disabled {
+          .challenge .challenge-board .challenge-board-right .challenge-buttons .challenge-button.active {
+            background-color: #1f4429;
+            border-color: #1f4429;
+            opacity: 0.75; }
+            .challenge .challenge-board .challenge-board-right .challenge-buttons .challenge-button.active .challenge-button-text, .challenge .challenge-board .challenge-board-right .challenge-buttons .challenge-button.active .challenge-button-icon {
+              color: white; }
+          .challenge .challenge-board .challenge-board-right .challenge-buttons .challenge-button:hover {
             background-color: #93cea3; }
-            .challenge .challenge-board .challenge-board-right .challenge-buttons .challenge-button:hover .challenge-button-text, .challenge .challenge-board .challenge-board-right .challenge-buttons .challenge-button:hover .challenge-button-icon, .challenge .challenge-board .challenge-board-right .challenge-buttons .challenge-button:disabled .challenge-button-text, .challenge .challenge-board .challenge-board-right .challenge-buttons .challenge-button:disabled .challenge-button-icon {
+            .challenge .challenge-board .challenge-board-right .challenge-buttons .challenge-button:hover .challenge-button-text, .challenge .challenge-board .challenge-board-right .challenge-buttons .challenge-button:hover .challenge-button-icon {
               color: white; }
     .challenge .challenge-board .challenge-repositories {
       width: 100%;
       margin: 0 80px 40px; }
       @media (max-width: 480px) {
         .challenge .challenge-board .challenge-repositories {
-          margin: 20px; } }
+          margin: 0 20px 40px; } }
       .challenge .challenge-board .challenge-repositories .challenge-panel {
         max-height: 0;
         overflow: hidden;
@@ -733,9 +741,11 @@ body * {
   -ms-transition: opacity 0.4s;
   -o-transition: opacity 0.4s;
   transition: opacity 0.4s;
-  opacity: 1; }
+  opacity: 1;
+  display: block; }
   .loading:not(.visible) {
-    opacity: 0; }
+    opacity: 0;
+    display: none; }
   .loading:after {
     content: " ";
     display: block;
