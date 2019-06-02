@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Frontend Chalenge - QConcursos</title>
-</head>
+    <title>Frontend Challenge - Qconcursos</title>
+<link href="main.css" rel="stylesheet"></head>
 <body>
     <button id="mobile-button" class="mobile-button">
         <i class="fas fa-bars mobile-button-icon"></i>
@@ -124,22 +124,23 @@
                         </li>
                     </ul>
                     <div class="challenge-buttons">
-                        <button id="show-repos-button" class=challenge-button>
-                            <span class="challenge-button-text">Ver Repositórios</span>
+                        <button id="show-repos-button" class=challenge-button data-target="#challenge-repos-panel">
+                            <span class="challenge-button-text">Ver Repositórios </span>
                         </button>
-                        <button id="show-starred-button" class=challenge-button>
+                        <button id="show-starred-button" class=challenge-button  data-target="#challenge-starred-panel">
                             <span class="challenge-button-text">Ver Favoritos</span>
                         </button>
                     </div>
                 </div>
                 <div class="challenge-repositories">
-                    <h4 class="challenge-repos-title challenge-list-title hidden">Lista dos Repositórios</h4>
-                    <ul id="challenge-repos-list" class="challenge-repositories-list">
-                    </ul>
-
-                    <h4 class="challenge-starred-title challenge-list-title hidden">Lista dos Favoritos</h4>
-                    <ul id="challenge-starred-list" class="challenge-repositories-list">
-                    </ul>
+                    <div id="challenge-repos-panel" class="challenge-panel visible">
+                        <h4 class="challenge-repos-title challenge-list-title hidden">Lista dos Repositórios</h4>
+                        <ul id="challenge-repos-list" class="challenge-repositories-list"></ul>
+                    </div>
+                    <div id="challenge-starred-panel" class="challenge-panel visible">
+                        <h4 class="challenge-starred-title challenge-list-title hidden">Lista dos Favoritos</h4>
+                        <ul id="challenge-starred-list" class="challenge-repositories-list visible"></ul>
+                    </div>
                 </div>
             </div>
         </div>
