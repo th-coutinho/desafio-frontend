@@ -1,9 +1,9 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const {CleanWebpackPlugin}  = require('clean-webpack-plugin');
 
 module.exports  = {
     module: {
-        
         rules: [
             {
                 test: /\.html$/,
@@ -37,9 +37,13 @@ module.exports  = {
             {
                 test: /\.scss$/,
                 use: [
-                    "style-loader",
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: { minimize: true }
+                    },
                     "css-loader",
                     "sass-loader"
+
                 ]
             },
             {
@@ -52,7 +56,7 @@ module.exports  = {
         ]
     },
     plugins: [
-        // Sem esse, o html não é gerado no SRC porque o Webpack só entende JS
+        new CleanWebpackPlugin(),
         new HtmlWebPackPlugin({
             template: "./src/index.html",
             filename: "./index.html"
@@ -60,6 +64,7 @@ module.exports  = {
         new MiniCssExtractPlugin({
             filename: "[name].css",
             chunkFilename: "[id].css"
-        })
+        }),
+        
     ]
 }
