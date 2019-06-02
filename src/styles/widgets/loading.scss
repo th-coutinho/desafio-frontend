@@ -2,9 +2,11 @@
     display: inline-block;
     @include transition(opacity $transition-time);
     opacity: 1;
+    display: block;
 
     &:not(.visible) {
         opacity: 0;
+        display: none;
     }
 
     &:after {

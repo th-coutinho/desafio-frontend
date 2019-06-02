@@ -109,6 +109,10 @@
             .challenge-buttons {
                 margin: $margin-lg 0;
 
+                @media (max-width: $screen-md) {
+                    margin: $margin-md 0;
+                }
+
                 .challenge-button {
                     border: 2px solid $color-medium-green;
                     height: 40px;
@@ -150,12 +154,17 @@
                         }
                     }
                     
-                    &:disabled {
-                        opacity: 0.5;
-                        cursor: default;
+                    &.active {
+                        background-color: $color-dark-green;
+                        border-color: $color-dark-green;
+                        opacity: 0.75;
+
+                        .challenge-button-text, .challenge-button-icon {
+                            color: $color-white;
+                        }
                     }
 
-                    &:hover, &:disabled {
+                    &:hover {
                         background-color: $color-medium-green;
 
                         .challenge-button-text, .challenge-button-icon {
@@ -171,7 +180,7 @@
             margin: 0 $margin-xl $margin-lg;
 
             @media (max-width: $screen-xs) {
-                margin: $margin-md;
+                margin: 0 $margin-md $margin-lg;
             }
 
             .challenge-panel {
