@@ -8,6 +8,7 @@
 // MIXINS
 @import "./base/mixins/animations.scss";
 @import "./base/mixins/transitions.scss";
+@import "./base/mixins/filter.scss";
 
 // PLACEHOLDERS
 @import "./base/placeholders/section_title.scss";
@@ -20,6 +21,9 @@
 @import './base/animations/fade_in_background.scss';
 @import './base/animations/growing_repository.scss';
 @import './base/animations/spinning_loading.scss';
+
+// LAYOUT
+@import './layout/blur.scss';
 
 // COMPONENTS
 @import './components/mobile_button.scss';

@@ -1,0 +1,4 @@
+.blur {
+    @include filter(blur, 2px);
+    @include transition(filter $transition-time);
+}

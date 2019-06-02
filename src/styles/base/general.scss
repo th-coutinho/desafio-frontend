@@ -1,6 +1,14 @@
 html {
   scroll-behavior: smooth;
+
+  * {
+    outline: none;
+  }
 }  
+
+body * {
+  box-sizing: border-box;
+}
 
 body,
 ul, li,
@@ -10,8 +18,4 @@ h1,h2,h3,h4,h5,h6 {
 
 ul {
   padding: 0;
-}
-
-body * {
-  box-sizing: border-box;
 }
