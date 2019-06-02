@@ -39,8 +39,9 @@ ul {
     -ms-transition: width 0.4s;
     -o-transition: width 0.4s;
     transition: width 0.4s; }
-  .side-menu .side-menu-logo:hover:after, .side-menu .side-menu-links-list .side-menu-link:hover:after, .navbar .navbar-left .navbar-logo:hover:after, .navbar .navbar-right .navbar-links-list .navbar-anchor:hover:after {
-    width: 100%; }
+  @media (min-width: 992px) {
+    .side-menu .side-menu-logo:hover:after, .side-menu .side-menu-links-list .side-menu-link:hover:after, .navbar .navbar-left .navbar-logo:hover:after, .navbar .navbar-right .navbar-links-list .navbar-anchor:hover:after {
+      width: 100%; } }
 
 .about-me .about-me-content, .navbar .navbar-container, .challenge .challenge-container {
   max-width: 100%;
