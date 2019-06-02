@@ -1,4 +1,3 @@
-
 .side-menu {
     position: fixed;
     overflow: hidden;
@@ -12,6 +11,7 @@
     padding: $margin-md $margin-sm;
     max-width: 75%;
     opacity: 0;
+
     @include transition((width $transition-time * 1.25, opacity $transition-time * 1.25));
 
     @media (min-width: $screen-md) {
@@ -36,6 +36,7 @@
         padding-bottom: $padding-xs;
         width: fit-content;
         border-bottom: 1px solid $color-black;
+
         @extend %link-underline-hover;
         @include transition(opacity $transition-time * 6);
         
@@ -63,9 +64,10 @@
             padding: $padding-xs;
             color: $color-black;
             font-family: $font-title;
-            @extend %link-underline-hover;
             overflow: visible;
             width: 100%;
+            
+            @extend %link-underline-hover;
 
             &.active {
                 background-color: $color-black;

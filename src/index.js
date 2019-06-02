@@ -16,4 +16,3 @@ window.addEventListener('scroll', toggleNavbarFixedStatus);
 document.querySelector("#mobile-button").addEventListener('click', toggleMobileMenu);
 
 ajaxRequest ("https://api.github.com/users/th-coutinho", fillBoardData);
-

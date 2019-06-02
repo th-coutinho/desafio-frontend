@@ -67,8 +67,6 @@
                 margin-top: $margin-sm;
                 font-size: $font-size-sm;
             }
-
-           
         }
 
         .challenge-board-right {
@@ -91,6 +89,7 @@
 
             .challenge-board-info {
                 list-style: none;
+
                 .challenge-board-item {
                     color: $color-dark-green;
                     font-family: $font-text;
@@ -109,7 +108,6 @@
 
             .challenge-buttons {
                 margin: $margin-lg 0;
-                
 
                 .challenge-button {
                     border: 2px solid $color-medium-green;
@@ -122,6 +120,7 @@
 
                     @media (max-width: $screen-md) {
                         width: 200px;
+
                         &:nth-child(2) {
                             margin-top: -2px;
                         }
@@ -142,13 +141,13 @@
 
                     &:hover, &:disabled {
                         background-color: $color-medium-green;
+
                         .challenge-button-text {
                             color: $color-white;
                         }
                     }
                 }
             }
-            
         }
 
         .challenge-repositories {
@@ -159,6 +158,17 @@
                 margin: $margin-md;
             }
 
+            .challenge-panel {
+                max-height: 0;
+                overflow: hidden;
+
+                @include transition(max-height $transition-time ease-out);
+
+                &.visible {
+                    max-height: 1000px;
+                }
+            }
+
             .challenge-list-title {
                 color: $color-dark-green;
                 font-family: $font-text;
@@ -167,6 +177,7 @@
                 text-decoration: none;
                 margin: $margin-md 0;
                 font-size: $font-size-sm;
+
                 &.hidden {
                     display: none;
                 }
@@ -174,9 +185,11 @@
 
             .challenge-repositories-list {
                 list-style: none;
+               
+
                 .challenge-repository {
                     padding-left: $padding-sm;
-                    @include animation(growing_repository 0.4s forwards);
+                    @include animation(growing_repository $transition-time forwards);
                     line-height: 40px;
                     width: 100%;
                     background-color: $color-white;
@@ -201,7 +214,5 @@
                 }
             }
         }
-
-        
     }
 }

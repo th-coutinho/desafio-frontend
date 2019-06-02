@@ -48,6 +48,7 @@
                 font-size: $font-size-xl * .5;
             }
         }
+
         .main-content-subtitle {
             font-size: $font-size-lg;
         }
@@ -57,13 +58,16 @@
         position: absolute;
         bottom: 0;
         margin-bottom: $margin-md;
+
         .social-media-list {
             list-style: none;
             display: flex;
             flex-direction: row;
+
             .social-media-item {
                 margin: 0 $margin-xs;
             }
+            
             .social-media-icon {
                 color: transparentize( $color-white, .5);
                 font-size: $icons-size;

@@ -11,13 +11,13 @@
         height: 2px;
         background-color: $color-white; 
         width: 0px;
-        transition: width .4s;    
+        
+        @include transition(width $transition-time);
     }
     
     &:hover {
         &:after {
             width: 100%;
         }
-      
     }
 }

@@ -7,6 +7,7 @@
     z-index: 11;
     background-color: transparentize($color-black, 0.5);
     border: 1px solid $color-white;
+
     @include transition(background $transition-time);
 
     .mobile-button-icon {
@@ -16,6 +17,7 @@
 
     &:hover, &:focus, &:active {
         background-color: $color-white;
+        
         .mobile-button-icon {
             background-clip: text;
             color: $color-black;
