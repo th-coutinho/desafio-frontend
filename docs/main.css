@@ -20,10 +20,10 @@ body * {
   text-align: center;
   margin-bottom: 40px; }
 
-.side-menu .logo, .side-menu .side-menu-links-list .side-menu-link, .navbar .navbar-left .logo, .navbar .navbar-right .navbar-links-list .navbar-anchor {
+.side-menu .side-menu-logo, .side-menu .side-menu-links-list .side-menu-link, .navbar .navbar-left .navbar-logo, .navbar .navbar-right .navbar-links-list .navbar-anchor {
   position: relative;
   cursor: pointer; }
-  .side-menu .logo:after, .side-menu .side-menu-links-list .side-menu-link:after, .navbar .navbar-left .logo:after, .navbar .navbar-right .navbar-links-list .navbar-anchor:after {
+  .side-menu .side-menu-logo:after, .side-menu .side-menu-links-list .side-menu-link:after, .navbar .navbar-left .navbar-logo:after, .navbar .navbar-right .navbar-links-list .navbar-anchor:after {
     content: '';
     position: absolute;
     z-index: 11;
@@ -37,7 +37,7 @@ body * {
     -ms-transition: width 0.4s;
     -o-transition: width 0.4s;
     transition: width 0.4s; }
-  .side-menu .logo:hover:after, .side-menu .side-menu-links-list .side-menu-link:hover:after, .navbar .navbar-left .logo:hover:after, .navbar .navbar-right .navbar-links-list .navbar-anchor:hover:after {
+  .side-menu .side-menu-logo:hover:after, .side-menu .side-menu-links-list .side-menu-link:hover:after, .navbar .navbar-left .navbar-logo:hover:after, .navbar .navbar-right .navbar-links-list .navbar-anchor:hover:after {
     width: 100%; }
 
 .about-me .about-me-content, .navbar .navbar-container, .challenge .challenge-container {
@@ -246,6 +246,36 @@ body * {
   100% {
     height: 40px; } }
 
+@-webkit-keyframes spinning-loading {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@-moz-keyframes spinning-loading {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@-ms-keyframes spinning-loading {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@-o-keyframes spinning-loading {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes spinning-loading {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
 .mobile-button {
   position: fixed;
   top: 20px;
@@ -297,7 +327,7 @@ body * {
     opacity: 1;
     width: 300px;
     max-width: 75%; }
-  .side-menu .logo {
+  .side-menu .side-menu-logo {
     display: block;
     white-space: nowrap;
     font-family: "Titillium Web", sans-serif;
@@ -314,7 +344,7 @@ body * {
     -ms-transition: opacity 2.4s;
     -o-transition: opacity 2.4s;
     transition: opacity 2.4s; }
-    .side-menu .logo.show {
+    .side-menu .side-menu-logo.show {
       opacity: 1; }
   .side-menu .side-menu-links-list {
     list-style: none;
@@ -410,17 +440,19 @@ body * {
     animation: unfixing 0.4s 1 forwards; }
   .navbar .navbar-left {
     float: left; }
-    .navbar .navbar-left .logo {
+    .navbar .navbar-left .navbar-anchor {
+      text-decoration: none; }
+    .navbar .navbar-left .navbar-logo {
       font-family: "Titillium Web", sans-serif;
       text-transform: uppercase;
       font-size: 20px;
       color: white;
       font-weight: 400; }
       @media (max-width: 992px) {
-        .navbar .navbar-left .logo {
+        .navbar .navbar-left .navbar-logo {
           padding: 0 25px; } }
       @media (max-width: 768px) {
-        .navbar .navbar-left .logo {
+        .navbar .navbar-left .navbar-logo {
           padding: 0; } }
   .navbar .navbar-right {
     float: right; }
@@ -596,31 +628,42 @@ body * {
           border: 2px solid #93cea3;
           height: 40px;
           background-color: transparent;
-          padding: 0 24px;
           margin-right: 10px;
+          cursor: pointer;
           -webkit-transition: background 0.4s, opacity 0.4s, color 0.4s;
           -moz-transition: background 0.4s, opacity 0.4s, color 0.4s;
           -ms-transition: background 0.4s, opacity 0.4s, color 0.4s;
           -o-transition: background 0.4s, opacity 0.4s, color 0.4s;
-          transition: background 0.4s, opacity 0.4s, color 0.4s;
-          cursor: pointer; }
+          transition: background 0.4s, opacity 0.4s, color 0.4s; }
           @media (max-width: 992px) {
             .challenge .challenge-board .challenge-board-right .challenge-buttons .challenge-button {
-              width: 200px; }
+              width: 200px;
+              padding: 0; }
               .challenge .challenge-board .challenge-board-right .challenge-buttons .challenge-button:nth-child(2) {
                 margin-top: -2px; } }
           .challenge .challenge-board .challenge-board-right .challenge-buttons .challenge-button .challenge-button-text {
+            padding: 0 8px;
             color: #93cea3;
             font-family: "Open Sans", sans-serif;
             text-transform: uppercase;
             font-weight: 700;
             font-size: 14.4px; }
+          .challenge .challenge-board .challenge-board-right .challenge-buttons .challenge-button .challenge-button-icon {
+            margin-left: 2.5px;
+            color: #93cea3;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 14.4px;
+            float: right;
+            margin-right: 14px; }
+            .challenge .challenge-board .challenge-board-right .challenge-buttons .challenge-button .challenge-button-icon.inverted {
+              transform: rotate(180deg); }
           .challenge .challenge-board .challenge-board-right .challenge-buttons .challenge-button:disabled {
             opacity: 0.5;
             cursor: default; }
           .challenge .challenge-board .challenge-board-right .challenge-buttons .challenge-button:hover, .challenge .challenge-board .challenge-board-right .challenge-buttons .challenge-button:disabled {
             background-color: #93cea3; }
-            .challenge .challenge-board .challenge-board-right .challenge-buttons .challenge-button:hover .challenge-button-text, .challenge .challenge-board .challenge-board-right .challenge-buttons .challenge-button:disabled .challenge-button-text {
+            .challenge .challenge-board .challenge-board-right .challenge-buttons .challenge-button:hover .challenge-button-text, .challenge .challenge-board .challenge-board-right .challenge-buttons .challenge-button:hover .challenge-button-icon, .challenge .challenge-board .challenge-board-right .challenge-buttons .challenge-button:disabled .challenge-button-text, .challenge .challenge-board .challenge-board-right .challenge-buttons .challenge-button:disabled .challenge-button-icon {
               color: white; }
     .challenge .challenge-board .challenge-repositories {
       width: 100%;
@@ -682,4 +725,29 @@ body * {
     color: white;
     font-family: "Open Sans", sans-serif;
     font-size: 14px; }
+
+.loading {
+  display: inline-block;
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -ms-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+  opacity: 1; }
+  .loading:not(.visible) {
+    opacity: 0; }
+  .loading:after {
+    content: " ";
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 5px solid #93cea3;
+    border-color: #93cea3 transparent #93cea3 transparent;
+    -webkit-animation: spinning-loading 0.4s linear infinite;
+    -moz-animation: spinning-loading 0.4s linear infinite;
+    -ms-animation: spinning-loading 0.4s linear infinite;
+    -o-animation: spinning-loading 0.4s linear infinite;
+    animation: spinning-loading 0.4s linear infinite; }
 

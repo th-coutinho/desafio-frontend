@@ -12,7 +12,7 @@
     </button>
 
     <div class="side-menu">
-        <span class="logo">Thiago Coutinho</span>
+        <span class="side-menu-logo">Thiago Coutinho</span>
         <ul class="side-menu-links-list">
             <li id="side-menu-link-main" class="side-menu-link active">
                 <a class="side-menu-anchor" href=#main-section>
@@ -38,7 +38,9 @@
     <header class="navbar">
         <div class="navbar-container">
             <div class="navbar-left">
-                <h1 class="logo">Thiago Coutinho</h1>
+                <a class="navbar-anchor" href="/">
+                    <h1 class="navbar-logo">Thiago Coutinho</h1>
+                </a>
             </div>
             <nav class="navbar-right">
                 <ul class="navbar-links-list">
@@ -126,11 +128,14 @@
                     <div class="challenge-buttons">
                         <button id="show-repos-button" class=challenge-button data-target="#challenge-repos-panel">
                             <span class="challenge-button-text">Ver Repositórios </span>
+                            <i class="fas fa-caret-down challenge-button-icon"></i>
                         </button>
                         <button id="show-starred-button" class=challenge-button  data-target="#challenge-starred-panel">
                             <span class="challenge-button-text">Ver Favoritos</span>
+                            <i class="fas fa-caret-down challenge-button-icon"></i>
                         </button>
                     </div>
+                    <div id="loading-icon" class="loading"></div>
                 </div>
                 <div class="challenge-repositories">
                     <div id="challenge-repos-panel" class="challenge-panel visible">
