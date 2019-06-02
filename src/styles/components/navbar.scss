@@ -39,7 +39,11 @@
     .navbar-left {
         float: left;
 
-        .logo {
+        .navbar-anchor {
+            text-decoration: none;
+        }
+
+        .navbar-logo {
             font-family: $font-title;
             text-transform: uppercase;
             font-size: $font-size-lg;

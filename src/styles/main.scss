@@ -19,6 +19,7 @@
 @import './base/animations/fix_unfix_navbar.scss';
 @import './base/animations/fade_in_background.scss';
 @import './base/animations/growing_repository.scss';
+@import './base/animations/spinning_loading.scss';
 
 // COMPONENTS
 @import './components/mobile_button.scss';
@@ -28,3 +29,6 @@
 @import './components/main.scss';
 @import './components/challenge.scss';
 @import './components/footer.scss';
+
+// WIDGETS
+@import './widgets/loading.scss';

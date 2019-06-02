@@ -1,0 +1,22 @@
+.loading {
+    display: inline-block;
+    @include transition(opacity $transition-time);
+    opacity: 1;
+
+    &:not(.visible) {
+        opacity: 0;
+    }
+
+    &:after {
+        content: " ";
+        display: block;
+        width: $font-size-lg;
+        height: $font-size-lg;
+        margin: 1px;
+        border-radius: 50%;
+        border: 5px solid $color-medium-green;
+        border-color: $color-medium-green transparent $color-medium-green transparent;
+
+        @include animation(spinning-loading .4s linear infinite);
+    }
+}

@@ -113,13 +113,14 @@
                     border: 2px solid $color-medium-green;
                     height: 40px;
                     background-color: transparent;
-                    padding: 0 $padding-md;
                     margin-right: $margin-xs;
-                    @include transition(background $transition-time, opacity $transition-time, color $transition-time);
                     cursor: pointer;
-
+                    
+                    @include transition(background $transition-time, opacity $transition-time, color $transition-time);
+                    
                     @media (max-width: $screen-md) {
                         width: 200px;
+                        padding: 0;
 
                         &:nth-child(2) {
                             margin-top: -2px;
@@ -127,11 +128,26 @@
                     }
 
                     .challenge-button-text {
+                        padding: 0 $padding-xs;
                         color: $color-medium-green;
                         font-family: $font-text;
                         text-transform: uppercase;
                         font-weight: $font-weight-bold;
                         font-size: $font-size-md * .9;
+                    }
+
+                    .challenge-button-icon {
+                        margin-left: $margin-xs * 0.25;
+                        color: $color-medium-green;
+                        text-transform: uppercase;
+                        font-weight: $font-weight-bold;
+                        font-size: $font-size-md * .9;   
+                        float: right;
+                        margin-right: $margin-sm;
+
+                        &.inverted {
+                            transform: rotate(180deg);
+                        }
                     }
                     
                     &:disabled {
@@ -142,7 +158,7 @@
                     &:hover, &:disabled {
                         background-color: $color-medium-green;
 
-                        .challenge-button-text {
+                        .challenge-button-text, .challenge-button-icon {
                             color: $color-white;
                         }
                     }
@@ -185,7 +201,6 @@
 
             .challenge-repositories-list {
                 list-style: none;
-               
 
                 .challenge-repository {
                     padding-left: $padding-sm;

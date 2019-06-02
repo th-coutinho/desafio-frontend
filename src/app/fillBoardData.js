@@ -18,14 +18,21 @@ const setData = (type, element_selector, data) => {
             break;
 
         case 'onclick': 
+            let invertCaret = () => {
+                let caret = document.querySelector(`${element_selector} .challenge-button-icon`);
+                caret.classList.toggle('inverted');
+            }
+
             let togglePanelFunction = () => {
                 let panel = document.querySelector(element_selector).dataset.target;
-
+                
                 panel = document.querySelector(panel);
                 panel.classList.toggle('visible');
+                invertCaret();
             }
 
             let loadContentFunction = () => {
+                invertCaret();
                 ajaxRequest(`https://api.github.com/users/th-coutinho/${data}`, fillRepoList, data);
 
                 element.removeEventListener("click", loadContentFunction);
