@@ -1,8 +1,7 @@
 import { ajaxRequest } from "./ajaxRequest";
-import { fillBoard } from "./fillBoard";
+import { fillRepoList } from "./fillRepoList";
 
 const setData = (type, element_selector, data) => {
-
     let element  = document.querySelector(element_selector);
 
     switch (type) {
@@ -19,9 +18,21 @@ const setData = (type, element_selector, data) => {
             break;
 
         case 'onclick': 
-            element.addEventListener("click", () => {
-                ajaxRequest(`https://api.github.com/users/th-coutinho/${data}`, fillBoard, data);
-            });
+            let togglePanelFunction = () => {
+                let panel = document.querySelector(element_selector).dataset.target;
+
+                panel = document.querySelector(panel);
+                panel.classList.toggle('visible');
+            }
+
+            let loadContentFunction = () => {
+                ajaxRequest(`https://api.github.com/users/th-coutinho/${data}`, fillRepoList, data);
+
+                element.removeEventListener("click", loadContentFunction);
+                element.addEventListener("click", togglePanelFunction);
+            }
+
+            element.addEventListener("click", loadContentFunction);
             break;
             
         default:
@@ -30,7 +41,6 @@ const setData = (type, element_selector, data) => {
 }
 
 const fillBoardData = (response) => {
-    
     setData('text', '#user-name', response.name);
     setData('picture', '#user-picture', response.avatar_url);
     setData('href', '#user-profile-link', response.html_url);
