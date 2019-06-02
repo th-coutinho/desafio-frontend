@@ -406,7 +406,8 @@ ul {
   -o-transition: opacity 0.4s;
   transition: opacity 0.4s; }
   .side-menu-shadow:not(.visible) {
-    opacity: 0; }
+    opacity: 0;
+    display: none; }
 
 .about-me {
   padding: 80px 0;
