@@ -16,8 +16,10 @@
     }
     
     &:hover {
-        &:after {
-            width: 100%;
+        @media (min-width: $screen-md) {
+            &:after {
+                width: 100%;
+            }
         }
     }
 }
