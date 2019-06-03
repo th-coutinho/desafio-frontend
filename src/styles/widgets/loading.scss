@@ -1,12 +1,12 @@
 .loading {
-    display: inline-block;
-    @include transition(opacity $transition-time);
-    opacity: 1;
     display: block;
+    opacity: 1;
+    margin-bottom: -$margin-sm;
+    
+    @include transition(opacity $transition-time);
 
     &:not(.visible) {
         opacity: 0;
-        display: none;
     }
 
     &:after {
