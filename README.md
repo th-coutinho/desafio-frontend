@@ -1,23 +1,22 @@
 # Frontend Challenge - Qconcursos
 
-Oi, meu nome é **Thiago Coutinho** e esta é a aplicação que desenvolvi para o desafio Frontend Challenge - Qconcursos*:
+Oi, meu nome é **Thiago Coutinho** e esta é a aplicação que desenvolvi para o desafio *Frontend Challenge - Qconcursos*:
 
 ## Tecnologias/ Ferramentas Utilizadas
 
 - Webpack
 - SCSS
 - Babel
-- FontAwesome*
 
 ## Sobre a aplicação
 
-Escolhi incluir na aplicação a pasta /docs que possui um build da aplicação e gerar uma página do GitHub Pages.
+Escolhi incluir na aplicação a pasta **/docs** que possui um build da aplicação para poder gerar uma página do **GitHub Pages**.
 
 A página pode ser conferida neste link: https://th-coutinho.github.io/desafio-frontend/
 
 ## Instalação
 
-Para baixar e rodar aplicação é somente necessário:
+A instalação do projeto consiste em:
 
  1. Clonar este repositório:
 
