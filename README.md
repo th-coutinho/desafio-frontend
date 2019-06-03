@@ -39,12 +39,12 @@ A instalação do projeto consiste em:
 ## Estrutura da Aplicação
 
 ```
-├── src
-│   ├── app  (Arquivos JS) 
+├── /src
+│   ├── /app  (Arquivos JS) 
 │   │
-│   ├── images (Arquivos de imagem)
+│   ├── /images (Arquivos de imagem)
 │   │
-│   ├── styles (Arquivos SCSS)
+│   ├── /styles (Arquivos SCSS)
 │   │ 
 │   ├── index.html (HTML Principal)
 │   │
